@@ -24,9 +24,18 @@ requirements:
     - cargo-bundle-licenses
 
 test:
+  requires:
+    - cmake
+    - ninja
+    - {{ compiler('cxx') }}
+  files:
+    - test-project/
   commands:
     - test -f $PREFIX/lib/libmetatensor$SHLIB_EXT  # [unix]
     - if not exist %PREFIX%\\Library\\bin\\metatensor.dll exit 1  # [win]
+    - cmake -G Ninja -S test-project -B test-project
+    - cmake --build test-project
+    - ctest --verbose --test-dir test-project
 
 about:
   home: https://github.com/lab-cosmo/metatensor
