@@ -10,7 +10,7 @@ source:
   sha256: dfcaf9a878620c1bfb30437e2f41f023c458ab44543282f4def75972c95b4729
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('libmetatensor', max_pin='x.x') }}
 
@@ -39,14 +39,14 @@ test:
     - ctest --verbose --test-dir test-project
 
 about:
-  home: https://github.com/lab-cosmo/metatensor
+  home: https://github.com/metatensor/metatensor
   summary: 'Self-describing sparse tensor data format for atomistic machine learning and beyond'
   license: BSD-3-Clause
   license_family: BSD
   license_file:
     - LICENSE
     - THIRDPARTY_LICENSES.yaml
-  doc_url: https://lab-cosmo.github.io/metatensor/
+  doc_url: https://docs.metatensor.org
 
 extra:
   recipe-maintainers:
