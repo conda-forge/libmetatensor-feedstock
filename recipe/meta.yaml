@@ -10,7 +10,7 @@ source:
   sha256: eec78853aa8d2e91d931712242566f8ad3c03cbd291c852fb67a166bfa2e0eaa
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('libmetatensor', max_pin='x.x') }}
 
