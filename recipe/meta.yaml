@@ -1,4 +1,4 @@
-{% set version = "0.2.4" %}
+{% set version = "0.2.5" %}
 {% set url_base = "https://github.com/lab-cosmo/metatensor/releases/download" %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: {{ url_base }}/metatensor-core-v{{ version }}/metatensor-core-cxx-{{ version }}.tar.gz
-  sha256: e38d749567a5779ffdfe48c3bf2cd7e5b7ea118ae378b6313d27335e7b86844f
+  sha256: b1f478b68ee84de9fca339a6f88cbc9f5e68585494ff41df52f7b708437edddf
 
 build:
   number: 0
